@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Zen+Dots&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    color: #ffffff;
+    font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+    background: #29262f;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.main {
+    min-height: 100vh;
+    overflow: hidden;
+    background: #29262f;
+}
+
+.hero {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+    background: #22242b;
+}
+
+.bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: blur(3px);
+    transform: scale(1.02);
+}
+
+.hero-text {
+    position: absolute;
+    z-index: 2;
+    top: 184px;
+    left: 50%;
+    width: min(100% - 40px, 820px);
+    transform: translateX(-50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+.hero-text p {
+    width: 360px;
+    margin-bottom: -5px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.hero-text h1 {
+    font-family: "Zen Dots", "Montserrat", sans-serif;
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: 0;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.hero-text h2 {
+    margin-top: 2px;
+    padding-left: 420px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.monkey {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    bottom: -154px;
+    width: auto;
+    height: 520px;
+    transform: translateX(-50%);
+}
+
+.mint {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: 320px;
+    width: 159px;
+    height: 40px;
+    border: 0;
+    color: #121212;
+    background: linear-gradient(#ffe786, #ffd95b);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.mint::before,
+.mint::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    width: 15px;
+    height: 27px;
+    border-left: 3px solid #28221e;
+    border-right: 3px solid #28221e;
+    transform: skew(16deg);
+}
+
+.mint::before {
+    left: 9px;
+}
+
+.mint::after {
+    right: 9px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    z-index: 4;
+    height: 96px;
+    background: #29262f;
+    clip-path: polygon(0 38%, 18% 67%, 36% 88%, 50% 100%, 64% 88%, 82% 67%, 100% 38%, 100% 100%, 0 100%);
+}
+
+.navbar {
+    position: relative;
+    z-index: 6;
+    width: min(100% - 32px, 920px);
+    height: 58px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+.logo {
+    width: 124px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.links {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+    white-space: nowrap;
+}
+
+.links a {
+    padding: 16px 0;
+    font-weight: 500;
+}
+
+.links .active {
+    padding-left: 13px;
+    padding-right: 13px;
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 9px;
+}
+
+.icons a {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    color: #4d4a50;
+    background: #ffffff;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.icons a:hover {
+    background: #ffe071;
+    transform: translateY(-1px);
+}
+
+.icons img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.vision {
+    position: relative;
+    z-index: 4;
+    margin-top: -2px;
+    padding: 25px 12px 22px;
+    background: #29262f;
+}
+
+.vision h1 {
+    text-align: center;
+    font-family: "Zen Dots", "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.line {
+    width: min(100% - 28px, 620px);
+    margin: 14px auto 23px;
+    display: flex;
+    align-items: center;
+}
+
+.bar {
+    flex: 1;
+    height: 1px;
+    background: rgba(246, 220, 184, 0.75);
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #f1d3a5;
+}
+
+.diamond {
+    width: 13px;
+    height: 13px;
+    margin: 0 2px;
+    border: 2px solid #f1d3a5;
+    background: #29262f;
+    transform: rotate(45deg);
+}
+
+.text {
+    width: min(100% - 32px, 620px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 78px;
+}
+
+.text p {
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 11px;
+    line-height: 1.46;
+}
